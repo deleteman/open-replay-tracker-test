@@ -6,6 +6,12 @@ import { Alert, Button } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import OpenReplay from '@openreplay/tracker';
+//...
+const tracker = new OpenReplay({
+  projectKey: "aQJ5u6DbFl4RhOJpBwzD"
+});
+tracker.start();
 
 const {Group, Label, Control} = {...Form}
 export default function App() {
