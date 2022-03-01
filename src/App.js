@@ -11,6 +11,7 @@ import OpenReplay from '@openreplay/tracker';
 const tracker = new OpenReplay({
   projectKey: "aQJ5u6DbFl4RhOJpBwzD"
 });
+tracker.setUserID("fernando.dolio@gmail.com");
 tracker.start();
 
 const {Group, Label, Control} = {...Form}
