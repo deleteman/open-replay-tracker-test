@@ -17,7 +17,12 @@ tracker.start();
 const {Group, Label, Control} = {...Form}
 export default function App() {
   const { register, handleSubmit, formState } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    if(Math.random() > 0.3) {
+      throw new Error("There was a terrible error during data submittion")
+    }
+    console.log(data);
+  }
   
   console.log(formState.errors)
   return (
