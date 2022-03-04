@@ -21,6 +21,7 @@ export default function App() {
     if(Math.random() > 0.1) {
       throw new Error("There was a terrible error during data submittion")
     }
+  }
     
   
   //console.log(formState.errors)
