@@ -18,13 +18,12 @@ const {Group, Label, Control} = {...Form}
 export default function App() {
   const { register, handleSubmit, formState } = useForm();
   const onSubmit = data => {
-    if(Math.random() > 0.3) {
+    if(Math.random() > 0.1) {
       throw new Error("There was a terrible error during data submittion")
     }
-    console.log(data);
-  }
+    
   
-  console.log(formState.errors)
+  //console.log(formState.errors)
   return (
     <Container>
     <form onSubmit={handleSubmit(onSubmit)} className="simpleForm">
@@ -32,7 +31,6 @@ export default function App() {
       {(!formState.isValid && formState.isSubmitted) ?
       <Alert variant="danger"   >
         {Object.values(formState.errors).map( (e,idx) => {
-          console.log(e)
           return (<p key={idx}>{e.message}</p>)
         })}
       </Alert>
