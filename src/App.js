@@ -7,10 +7,13 @@ import { Alert, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import OpenReplay from '@openreplay/tracker';
+import trackerAssist from '@openreplay/tracker-assist';
+
 //...
 const tracker = new OpenReplay({
   projectKey: "aQJ5u6DbFl4RhOJpBwzD"
 });
+tracker.use(trackerAssist({})); // check the list of available options below
 tracker.setUserID("fernando.dolio@gmail.com");
 tracker.start();
 
