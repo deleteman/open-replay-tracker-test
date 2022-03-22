@@ -33,6 +33,7 @@ function Layout() {
 export default function App() {
   //console.log(formState.errors)
   return (
+    <Container>
     <Router>
 
       <nav className='menu'>
@@ -49,5 +50,6 @@ export default function App() {
 
       
   </Router>
+  </Container>
   );
 }
