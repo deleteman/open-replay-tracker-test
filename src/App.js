@@ -13,12 +13,16 @@ import {
   BrowserRouter as Router ,
   Route, Routes, Outlet} from 'react-router-dom';
 
+const users = ["fernando.doglio@gmail.com", "adam.sandler@fakeeamil.com", "thisisatest@gmail.com", "tomholland@imspiderman.com"]
+
+
 //...
 const tracker = new OpenReplay({
   projectKey: "aQJ5u6DbFl4RhOJpBwzD"
 });
 tracker.use(trackerAssist({})); // check the list of available options below
-tracker.setUserID("fernando.dolio@gmail.com");
+let userId  = users[Math.ceil(Math.random() * 3)]
+tracker.setUserID(userId);
 tracker.start();
 
 
